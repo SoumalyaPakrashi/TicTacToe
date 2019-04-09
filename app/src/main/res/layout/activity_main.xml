@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.9"
-        android:background="#FEEFC1">
+        android:background="#FEEFC1"
+        android:elevation="10dp">
 
     </android.support.constraint.ConstraintLayout>
 
@@ -19,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.45"
-        android:background="#808080"
+        android:background="@android:color/darker_gray"
         android:orientation="vertical">
 
         <LinearLayout

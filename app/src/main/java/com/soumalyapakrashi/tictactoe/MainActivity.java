@@ -6,9 +6,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
+// Enumeration to define the possible sources of inputs in the grid
+enum Turn {
+    PLAYER1, PLAYER2, NO_ONE;
+}
+
+
 public class MainActivity extends AppCompatActivity {
 
-    int player = 1;
+    Turn player = Turn.PLAYER1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +32,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid1.getText() != "X"  &&  grid1.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid1.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid1.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -43,13 +50,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid2.getText() != "X"  &&  grid2.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid2.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid2.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -61,13 +68,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid3.getText() != "X"  &&  grid3.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid3.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid3.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -79,13 +86,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid4.getText() != "X"  &&  grid4.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid4.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid4.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -97,13 +104,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid5.getText() != "X"  &&  grid5.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid5.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid5.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -115,13 +122,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid6.getText() != "X"  &&  grid6.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid6.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid6.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -133,13 +140,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid7.getText() != "X"  &&  grid7.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid7.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid7.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -151,13 +158,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid8.getText() != "X"  &&  grid8.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid8.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid8.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -169,13 +176,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(grid9.getText() != "X"  &&  grid9.getText() != "O") {
-                    if(player == 1) {
+                    if(player == Turn.PLAYER1) {
                         grid9.setText("X");
-                        player = 2;
+                        player = Turn.PLAYER2;
                     }
                     else {
                         grid9.setText("O");
-                        player = 1;
+                        player = Turn.PLAYER1;
                     }
                 }
             }
@@ -197,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
                 grid8.setText("");
                 grid9.setText("");
 
-                player = 1;
+                player = Turn.PLAYER1;
             }
         });
     }
