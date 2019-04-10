@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 // Enumeration to define the possible sources of inputs in the grid
@@ -31,14 +32,22 @@ public class MainActivity extends AppCompatActivity {
         grid1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid1.getText() != "X"  &&  grid1.getText() != "O") {
+                if(grid1.getText() != "X"  &&  grid1.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid1.setText("X");
+                        WinLogic.updateMatrix(player, 1);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid1.setText("O");
+                        WinLogic.updateMatrix(player, 1);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -49,14 +58,22 @@ public class MainActivity extends AppCompatActivity {
         grid2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid2.getText() != "X"  &&  grid2.getText() != "O") {
+                if(grid2.getText() != "X"  &&  grid2.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid2.setText("X");
+                        WinLogic.updateMatrix(player,2);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid2.setText("O");
+                        WinLogic.updateMatrix(player, 2);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -67,14 +84,22 @@ public class MainActivity extends AppCompatActivity {
         grid3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid3.getText() != "X"  &&  grid3.getText() != "O") {
+                if(grid3.getText() != "X"  &&  grid3.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid3.setText("X");
+                        WinLogic.updateMatrix(player,3);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid3.setText("O");
+                        WinLogic.updateMatrix(player, 3);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -85,14 +110,22 @@ public class MainActivity extends AppCompatActivity {
         grid4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid4.getText() != "X"  &&  grid4.getText() != "O") {
+                if(grid4.getText() != "X"  &&  grid4.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid4.setText("X");
+                        WinLogic.updateMatrix(player, 4);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid4.setText("O");
+                        WinLogic.updateMatrix(player, 4);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -103,14 +136,22 @@ public class MainActivity extends AppCompatActivity {
         grid5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid5.getText() != "X"  &&  grid5.getText() != "O") {
+                if(grid5.getText() != "X"  &&  grid5.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid5.setText("X");
+                        WinLogic.updateMatrix(player, 5);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid5.setText("O");
+                        WinLogic.updateMatrix(player, 5);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -121,14 +162,22 @@ public class MainActivity extends AppCompatActivity {
         grid6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid6.getText() != "X"  &&  grid6.getText() != "O") {
+                if(grid6.getText() != "X"  &&  grid6.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid6.setText("X");
+                        WinLogic.updateMatrix(player, 6);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid6.setText("O");
+                        WinLogic.updateMatrix(player, 6);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -139,14 +188,22 @@ public class MainActivity extends AppCompatActivity {
         grid7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid7.getText() != "X"  &&  grid7.getText() != "O") {
+                if(grid7.getText() != "X"  &&  grid7.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid7.setText("X");
+                        WinLogic.updateMatrix(player, 7);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid7.setText("O");
+                        WinLogic.updateMatrix(player, 7);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -157,14 +214,22 @@ public class MainActivity extends AppCompatActivity {
         grid8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid8.getText() != "X"  &&  grid8.getText() != "O") {
+                if(grid8.getText() != "X"  &&  grid8.getText() != "O"  && player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid8.setText("X");
+                        WinLogic.updateMatrix(player, 8);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid8.setText("O");
+                        WinLogic.updateMatrix(player, 8);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -175,14 +240,22 @@ public class MainActivity extends AppCompatActivity {
         grid9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(grid9.getText() != "X"  &&  grid9.getText() != "O") {
+                if(grid9.getText() != "X"  &&  grid9.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid9.setText("X");
+                        WinLogic.updateMatrix(player, 9);
                         player = Turn.PLAYER2;
                     }
-                    else {
+                    else if(player == Turn.PLAYER2){
                         grid9.setText("O");
+                        WinLogic.updateMatrix(player, 9);
                         player = Turn.PLAYER1;
+                    }
+
+                    int win = WinLogic.checkWin();
+                    if(win == 1  ||  win == 2) {
+                        player = Turn.NO_ONE;
+                        Toast.makeText(getApplicationContext(), "Player " + win + " Won", Toast.LENGTH_LONG).show();
                     }
                 }
             }
@@ -205,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
                 grid9.setText("");
 
                 player = Turn.PLAYER1;
+                WinLogic.resetMatrix();
             }
         });
     }
