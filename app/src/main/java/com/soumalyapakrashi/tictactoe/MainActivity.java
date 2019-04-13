@@ -1,5 +1,6 @@
 package com.soumalyapakrashi.tictactoe;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,11 +36,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid1.getText() != "X"  &&  grid1.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid1.setText("X");
+                        grid1.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player, 1);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid1.setText("O");
+                        grid1.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 1);
                         player = Turn.PLAYER1;
                     }
@@ -61,11 +64,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid2.getText() != "X"  &&  grid2.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid2.setText("X");
+                        grid2.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player,2);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid2.setText("O");
+                        grid2.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 2);
                         player = Turn.PLAYER1;
                     }
@@ -87,11 +92,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid3.getText() != "X"  &&  grid3.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid3.setText("X");
+                        grid3.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player,3);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid3.setText("O");
+                        grid3.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 3);
                         player = Turn.PLAYER1;
                     }
@@ -113,11 +120,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid4.getText() != "X"  &&  grid4.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid4.setText("X");
+                        grid4.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player, 4);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid4.setText("O");
+                        grid4.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 4);
                         player = Turn.PLAYER1;
                     }
@@ -139,11 +148,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid5.getText() != "X"  &&  grid5.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid5.setText("X");
+                        grid5.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player, 5);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid5.setText("O");
+                        grid5.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 5);
                         player = Turn.PLAYER1;
                     }
@@ -165,11 +176,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid6.getText() != "X"  &&  grid6.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid6.setText("X");
+                        grid6.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player, 6);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid6.setText("O");
+                        grid6.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 6);
                         player = Turn.PLAYER1;
                     }
@@ -191,11 +204,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid7.getText() != "X"  &&  grid7.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid7.setText("X");
+                        grid7.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player, 7);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid7.setText("O");
+                        grid7.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 7);
                         player = Turn.PLAYER1;
                     }
@@ -217,11 +232,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid8.getText() != "X"  &&  grid8.getText() != "O"  && player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid8.setText("X");
+                        grid8.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player, 8);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid8.setText("O");
+                        grid8.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 8);
                         player = Turn.PLAYER1;
                     }
@@ -243,11 +260,13 @@ public class MainActivity extends AppCompatActivity {
                 if(grid9.getText() != "X"  &&  grid9.getText() != "O"  &&  player != Turn.NO_ONE) {
                     if(player == Turn.PLAYER1) {
                         grid9.setText("X");
+                        grid9.setTextColor(getResources().getColor(R.color.colorX));
                         WinLogic.updateMatrix(player, 9);
                         player = Turn.PLAYER2;
                     }
                     else if(player == Turn.PLAYER2){
                         grid9.setText("O");
+                        grid9.setTextColor(getResources().getColor(R.color.colorY));
                         WinLogic.updateMatrix(player, 9);
                         player = Turn.PLAYER1;
                     }
